@@ -1,0 +1,21 @@
+def reverse_concatenate(str1, str2, str3):
+    """Concatenate three strings in reverse order."""
+    return str3 + str2 + str1
+
+
+def main():
+    # Prompt the user for three strings
+    string1 = input("Enter the first string: ")
+    string2 = input("Enter the second string: ")
+    string3 = input("Enter the third string: ")
+
+    # Call the function and store the result
+    result = reverse_concatenate(string1, string2, string3)
+
+    # Print the concatenated result
+    print("Concatenated string in reverse order:", result)
+
+
+# Call the main function
+if __name__ == "__main__":
+    main()
