@@ -1,0 +1,39 @@
+class Automobile:
+    def __init__(self, make, model, color, year, mileage):
+        self.make = make
+        self.model = model
+        self.color = color
+        self.year = year
+        self.mileage = mileage
+
+    def __str__(self):
+        return f"{self.year} {self.color} {self.make} {self.model} (Mileage: {self.mileage})"
+
+class VehicleInventory:
+    def __init__(self):
+        self.inventory = []
+
+    def add_vehicle(self, make, model, color, year, mileage):
+        new_vehicle = Automobile(make, model, color, year, mileage)
+        self.inventory.append(new_vehicle)
+        print(f"Added vehicle: {new_vehicle}")
+
+    def remove_vehicle(self, make, model):
+        for vehicle in self.inventory:
+            if vehicle.make == make and vehicle.model == model:
+                self.inventory.remove(vehicle)
+                print(f"Removed vehicle: {vehicle}")
+                return
+        print(f"Vehicle {make} {model} not found in inventory.")
+
+    def list_inventory(self):
+        if not self.inventory:
+            print("No vehicles in inventory.")
+        else:
+            print("Current Vehicle Inventory:")
+            for vehicle in self.inventory:
+                print(vehicle)
+
+# Example usage
+if __name__ == "__main__":
+    inventory = VehicleInventor
